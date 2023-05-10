@@ -1,0 +1,20 @@
+I always thought about Git and GitHub as the same thing.  In fact, they are separate things.  
+There are also GUIs that allow you to manage the remote repositories.While Git is the language of source code 
+control, GitHub is a web-based repository storage solution.  You don’t have to store repositories on GitHub, 
+and there are competitors.  GitHub was the first and remains the most popular.
+
+When you create a shared repository, you normally start at the remote host such as GitHub.com, but while we
+are learning git, we will start on the local machine.  Later we'll create an empty repository on GitHub, download
+it to the local machine, add stuff and push it back to the remote host, but for now, we'll concentrate on the
+local machine
+
+A repository is just a folder where files are stored.  The files don’t have to be code files, they can be text 
+files or anything else.  For this discussion we’ll stick to software and text.  Files like word documents can also
+be tracked, but only at the file level.  Text and software files (which are basically text files) can be tracked
+to the line changed.
+
+Putting a bunch of files in a folder, doesn’t make it a repository.  The repository must be created.  
+We'll start a new repository on your local machine.  Git can manage a repository stored anywhere, including the 
+local machine.Before starting download Windows Terminal if you don’t already have it.  
+Then go to www.git-scm.com and download a copy of Git.
+

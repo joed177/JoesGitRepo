@@ -1,0 +1,31 @@
+Creating your first Repository
+
+Create a local directory where you want your repository to exist.  This folder will be the repository.  
+You can put the files you want to track into this folder before or after creating the repository.
+The command:
+	git init		# create the repository
+
+Will create the repository, effectively creating a subfolder called .git.  This folder will hold all the 
+SCCS tracking information.  Before doing anything else with this folder create a file called .gitignore, 
+using any editor in the root of the repository.  To this file add *.log to ignore log files.
+Add a new line **/logs 		# if you have a folder that contains log files
+
+Save the file.
+
+Before proceeding we must commit this .gitignore file.
+Git status will show that the .gitignore exists in you repository but is not being tracked.
+
+	Git add .gitignore 	#adds the file to be committed (ie staged)
+	Git commit
+
+The editor you chose will pop up allowing you to indicated what change was made.  You must add an explanation of
+what was changed / added.  If you don’t explain the change, the commit will be aborted.  The commit message 
+is important and should explain what is changing clearly.
+
+To commit another file:
+	Git add filename 		# adds one file
+	Git add . 			# adds all files
+	Git commit -m “short message”		# a shortcut that doesn’t open a notepad file
+	Git log 		# shows what branch you are on and where you are in the SCCS (HEAD) normally 
+				# at the end of the chain
+	

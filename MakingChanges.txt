@@ -1,0 +1,51 @@
+Making changes to files
+
+We don’t make changes to files on the main branch of the repository.  Instead, we create a branch, 
+edit the files in the branch, and when we’re satisfied that the changes are what we want, we merge them back 
+to the main branch.
+
+To create a branch:
+
+	Git branch branchname		# make the name meaningful
+
+Example:
+	Git branch bug-FixBadCall	# or something else meaningful
+	Git status 
+
+will now show a new branch with the current branch preceded by ‘*’ indicating which branch you are currently on.
+It will also show any new files that have not been added for tracking.  To switch to the new branch, 
+we just created we type:
+
+	Git checkout	branchname		# switches to the new branch
+
+Once on the new branch, make changes to the files as required.  When the changes are made do:
+	Git add filename	# file name changed
+Or
+	Git add .		# add all files that were changed
+Then
+	Git commit		# commits the files to the branch
+
+If we need to delete a branch:
+	Git branch -d branchname	# deletes the branch.  The ‘main’ branch is usually not deleted.
+
+So, it’s a two step process:
+	Git branch branchname		# create the branch
+	Git checkout branchname		# switch to the branch
+
+There is a shortcut that creates the branch and switches to it in one step:
+	Git branch -b branchname
+
+After adding / making changes to files git status will show something like:
+
+Changes not staged for commit:
+	(use git add <file>... to include in what will be committed)
+	(use git restore <file ... to discard changes in working directory)
+		modified git.docx
+
+Untracked files:
+	(use git add <file ... to include in what will be committed)
+		CreatingFirstRepository.txt
+		GitGettingStarted.txt
+		MakingChangres.txt
+
+no changed added to commit (use git add and / or git commit -a)
